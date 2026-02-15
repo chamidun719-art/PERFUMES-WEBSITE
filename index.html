@@ -80,6 +80,37 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #555;
         }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1.5s ease-out forwards;
+        }
     </style>
 </head>
 
@@ -250,6 +281,102 @@
                 <a href="shop.html"
                     class="inline-block border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-black px-10 py-3 transition-colors duration-300 uppercase tracking-widest text-sm font-semibold">View
                     All Perfumes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Journey / Gallery Section -->
+    <section class="py-24 bg-black relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-500/20 to-transparent">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-gold-400 tracking-[0.2em] text-sm uppercase font-bold mb-2 block animate-fade-in">Our
+                    Inspiration</span>
+                <h2 class="text-3xl md:text-5xl font-serif text-white mb-6">A Visual Journey</h2>
+                <div class="w-16 h-0.5 bg-gold-500 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-1 md:gap-4 auto-rows-[250px]">
+                <!-- Large Feature (Tea) -->
+                <div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-sm cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1596436889106-93c4e0b0e00c?q=80&w=2070&auto=format&fit=crop"
+                        alt="Ceylon Tea Plantation"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="absolute bottom-8 left-8 text-white transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        <h3 class="font-serif text-2xl mb-1">Misty Highlands</h3>
+                        <p class="text-gold-400 text-sm tracking-wider">NUWARA ELIYA</p>
+                    </div>
+                </div>
+
+                <!-- Tall Feature (Woman/Model or Bottle) -->
+                <div class="md:col-span-1 md:row-span-2 relative group overflow-hidden rounded-sm cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1616010023477-93ae34f669db?q=80&w=2574&auto=format&fit=crop"
+                        alt="Ocean Vibe"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500">
+                    </div>
+                    <div
+                        class="absolute bottom-8 left-6 text-white transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        <h3 class="font-serif text-xl">Coastal Breeze</h3>
+                    </div>
+                </div>
+
+                <!-- Small Feature 1 (Spices) -->
+                <div class="relative group overflow-hidden rounded-sm cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1595166687405-c08122c6734c?q=80&w=2670&auto=format&fit=crop"
+                        alt="Cinnamon Sticks"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500">
+                    </div>
+                    <div
+                        class="absolute bottom-4 left-4 text-white transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        <p class="text-gold-400 text-xs font-bold uppercase tracking-wider">Ceylon Cinnamon</p>
+                    </div>
+                </div>
+
+                <!-- Small Feature 2 (Flowers) -->
+                <div class="relative group overflow-hidden rounded-sm cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=2545&auto=format&fit=crop"
+                        alt="Sri Lanka Nature"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500">
+                    </div>
+                    <div
+                        class="absolute bottom-4 left-4 text-white transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        <p class="text-gold-400 text-xs font-bold uppercase tracking-wider">Tropical Flora</p>
+                    </div>
+                </div>
+
+                <!-- Wide Feature (Luxury Bottle) -->
+                <div class="md:col-span-2 relative group overflow-hidden rounded-sm cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=2670&auto=format&fit=crop"
+                        alt="Luxury Bottle"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500">
+                    </div>
+                    <div
+                        class="absolute bottom-6 left-6 text-white transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        <h3 class="font-serif text-xl">Bottled Elegance</h3>
+                    </div>
+                </div>
+
+                <!-- Last Feature (Process/Hands) -->
+                <div class="md:col-span-1 relative group overflow-hidden rounded-sm cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1605367031828-e50e8bc3eb5a?q=80&w=2574&auto=format&fit=crop"
+                        alt="Harvest"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500">
+                    </div>
+                    <div
+                        class="absolute bottom-6 left-6 text-white transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        <h3 class="font-serif text-xl">Hand Harvested</h3>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
