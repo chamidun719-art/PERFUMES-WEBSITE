@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceylon Essence - Sri Lankan Premium Perfumes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            400: '#FFD700',
+                            500: '#C5A000',
+                            600: '#A08000',
+                        },
+                        dark: {
+                            900: '#0a0a0a',
+                            800: '#1a1a1a',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050505;
+            color: #f3f4f6;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .glass-nav {
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+        }
+
+        .hero-pattern {
+            background-image: radial-gradient(circle at center, rgba(255, 215, 0, 0.15) 0%, rgba(5, 5, 5, 0) 70%);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.1);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-gold-500 selection:text-black">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold tracking-widest text-gold-400">CEYLON<span
+                            class="text-white">ESSENCE</span></a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html"
+                            class="text-gold-400 px-3 py-2 rounded-md text-sm font-medium border-b-2 border-gold-400">Home</a>
+                        <a href="shop.html"
+                            class="text-gray-300 hover:text-gold-400 hover:border-gold-400 px-3 py-2 rounded-md text-sm font-medium border-b-2 border-transparent transition-all">Collections</a>
+                        <a href="about.html"
+                            class="text-gray-300 hover:text-gold-400 hover:border-gold-400 px-3 py-2 rounded-md text-sm font-medium border-b-2 border-transparent transition-all">Our
+                            Story</a>
+                        <a href="contact.html"
+                            class="text-gray-300 hover:text-gold-400 hover:border-gold-400 px-3 py-2 rounded-md text-sm font-medium border-b-2 border-transparent transition-all">Contact</a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button class="p-2 text-gray-300 hover:text-gold-400 transition-colors relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                        </svg>
+                        <span
+                            class="absolute top-0 right-0 bg-gold-500 text-black text-xs font-bold rounded-full h-4 w-4 flex items-center justify-center">0</span>
+                    </button>
+                    <div class="md:hidden">
+                        <!-- Mobile menu button -->
+                        <button type="button" class="text-gray-300 hover:text-white focus:outline-none">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen relative flex items-center justify-center overflow-hidden pt-20">
+        <!-- Background -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black z-10"></div>
+            <!-- Placeholder for Hero Image if generation fails, styled div -->
+            <div id="hero-bg"
+                class="w-full h-full bg-[url('https://images.unsplash.com/photo-1615634260167-c8cdede054de?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-[20s] hover:scale-110">
+            </div>
+        </div>
+
+        <div class="relative z-20 text-center px-4 max-w-5xl mx-auto hero-pattern py-20">
+            <p class="text-gold-400 tracking-[0.3em] uppercase mb-4 animate-fade-in-up">Discover the Scent of Ceylon</p>
+            <h1 class="text-5xl md:text-7xl lg:text-9xl font-bold text-white mb-6 leading-tight drop-shadow-2xl">
+                Essence of <br><span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 to-yellow-600">Paradise</span>
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                Handcrafted perfumes inspired by the ancient spices, lush rainforests, and misty hills of Sri Lanka.
+                Experience luxury in every drop.
+            </p>
+            <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                <a href="shop.html"
+                    class="group relative px-8 py-3 bg-gold-500 text-black font-semibold rounded-none overflow-hidden transition-all duration-300 hover:bg-gold-400">
+                    <span class="relative z-10">Shop Collection</span>
+                    <div
+                        class="absolute inset-0 h-full w-full scale-0 rounded-none transition-all duration-300 group-hover:scale-100 group-hover:bg-white/20">
+                    </div>
+                </a>
+                <a href="about.html"
+                    class="px-8 py-3 border border-gray-500 text-gray-300 hover:border-gold-400 hover:text-gold-400 transition-all duration-300">
+                    Our Heritage
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-24 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Signature Collections</h2>
+                <div class="w-24 h-1 bg-gold-500 mx-auto"></div>
+                <p class="mt-4 text-gray-400">Curated scents that tell the story of Sri Lanka</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Product 1 -->
+                <div
+                    class="group relative bg-dark-800 rounded-sm overflow-hidden card-hover transition-all duration-300">
+                    <div class="aspect-w-3 aspect-h-4 bg-gray-800 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1595166687405-c08122c6734c?q=80&w=2670&auto=format&fit=crop"
+                            alt="Royal Cinnamon"
+                            class="object-cover w-full h-full transform transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100">
+                        <div class="absolute top-4 right-4 bg-gold-500 text-black text-xs font-bold px-2 py-1">
+                            BESTSELLER</div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-serif text-white mb-2">Sigiriya Gold</h3>
+                        <p class="text-gold-400 text-sm mb-4">Cinnamon • Sandalwood • Amber</p>
+                        <p class="text-gray-400 text-sm mb-6 line-clamp-2">Inspired by the ancient rock fortress, a bold
+                            and regal scent fitting for royalty.</p>
+                        <div class="flex items-center justify-between border-t border-gray-700 pt-4">
+                            <span class="text-xl text-white font-bold">LKR 12,500</span>
+                            <button
+                                class="text-sm text-gold-400 hover:text-white uppercase tracking-wider font-semibold">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div
+                    class="group relative bg-dark-800 rounded-sm overflow-hidden card-hover transition-all duration-300">
+                    <div class="aspect-w-3 aspect-h-4 bg-gray-800 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1616010023477-93ae34f669db?q=80&w=2574&auto=format&fit=crop"
+                            alt="Ocean Mist"
+                            class="object-cover w-full h-full transform transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-serif text-white mb-2">Mirissa Breeze</h3>
+                        <p class="text-gold-400 text-sm mb-4">Sea Salt • Coconut • Vanilla</p>
+                        <p class="text-gray-400 text-sm mb-6 line-clamp-2">A refreshing aquatic fragrance capturing the
+                            essence of the southern coast.</p>
+                        <div class="flex items-center justify-between border-t border-gray-700 pt-4">
+                            <span class="text-xl text-white font-bold">LKR 10,500</span>
+                            <button
+                                class="text-sm text-gold-400 hover:text-white uppercase tracking-wider font-semibold">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div
+                    class="group relative bg-dark-800 rounded-sm overflow-hidden card-hover transition-all duration-300">
+                    <div class="aspect-w-3 aspect-h-4 bg-gray-800 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1594035910387-fea4779426e9?q=80&w=2565&auto=format&fit=crop"
+                            alt="Hill Country"
+                            class="object-cover w-full h-full transform transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-serif text-white mb-2">Ella Mist</h3>
+                        <p class="text-gold-400 text-sm mb-4">Tea Leaf • Jasmine • Orchid</p>
+                        <p class="text-gray-400 text-sm mb-6 line-clamp-2">A floral and fresh scent reminiscent of the
+                            cool misty tea gardens of Ella.</p>
+                        <div class="flex items-center justify-between border-t border-gray-700 pt-4">
+                            <span class="text-xl text-white font-bold">LKR 11,000</span>
+                            <button
+                                class="text-sm text-gold-400 hover:text-white uppercase tracking-wider font-semibold">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <a href="shop.html"
+                    class="inline-block border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-black px-10 py-3 transition-colors duration-300 uppercase tracking-widest text-sm font-semibold">View
+                    All Perfumes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story/Parallax Section -->
+    <section class="relative py-32 bg-fixed bg-center bg-cover"
+        style="background-image: url('https://images.unsplash.com/photo-1506484381205-f7945653044d?q=80&w=2670&auto=format&fit=crop');">
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="relative z-10 max-w-4xl mx-auto text-center px-4">
+            <h2 class="text-4xl md:text-5xl font-serif text-white mb-6">Born from Nature</h2>
+            <p class="text-xl text-gray-200 leading-relaxed mb-8">
+                Our perfumes are more than just scents; they are memories bottled in glass.
+                Using only the finest ingredients sourced directly from sustainable farms in Sri Lanka,
+                we create fragrances that transport you to paradise.
+            </p>
+            <a href="about.html"
+                class="text-gold-400 hover:text-white border-b border-gold-400 hover:border-white pb-1 transition-colors">Read
+                Our Story</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-16 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="col-span-1 md:col-span-1">
+                    <a href="index.html" class="text-xl font-bold tracking-widest text-gold-400 block mb-6">CEYLON<span
+                            class="text-white">ESSENCE</span></a>
+                    <p class="text-gray-500 text-sm leading-loose">
+                        Premium Sri Lankan perfumery bringing the island's exquisite collection of scents to the world.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-serif mb-6">Shop</h4>
+                    <ul class="space-y-4 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-gold-400 transition-colors">New Arrivals</a></li>
+                        <li><a href="#" class="hover:text-gold-400 transition-colors">Best Sellers</a></li>
+                        <li><a href="#" class="hover:text-gold-400 transition-colors">Men's Collection</a></li>
+                        <li><a href="#" class="hover:text-gold-400 transition-colors">Women's Collection</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-serif mb-6">Company</h4>
+                    <ul class="space-y-4 text-sm text-gray-500">
+                        <li><a href="about.html" class="hover:text-gold-400 transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-gold-400 transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-gold-400 transition-colors">Sustainability</a></li>
+                        <li><a href="#" class="hover:text-gold-400 transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-serif mb-6">Newsletter</h4>
+                    <p class="text-gray-500 text-sm mb-4">Subscribe to receive updates, access to exclusive deals, and
+                        more.</p>
+                    <form class="flex flex-col space-y-2">
+                        <input type="email" placeholder="Enter your email"
+                            class="bg-dark-800 border border-gray-800 text-white px-4 py-2 focus:outline-none focus:border-gold-500 transition-colors">
+                        <button
+                            class="bg-gold-500 text-black px-4 py-2 font-semibold hover:bg-gold-400 transition-colors">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-900 mt-16 pt-8 text-center text-gray-600 text-xs">
+                &copy; 2026 Ceylon Essence. All rights reserved. Made in Sri Lanka.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
